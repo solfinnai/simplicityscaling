@@ -9,7 +9,7 @@ export function HeaderBrand() {
   const className = "group flex shrink-0 items-center no-underline";
   const logo = (
     <Image
-      src="/images/simplicity-logo.webp"
+      src="https://simplicitymedia.com/images/simplicity-logo.webp"
       alt="Simplicity Media"
       width={272}
       height={50}
