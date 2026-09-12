@@ -33,6 +33,8 @@ Local: `http://127.0.0.1:43127`
 
 Vercel project `simplicityscaling` is linked to that GitHub repo. Deployment protection is off. Pushes to `main` publish production.
 
+The Optima record lives on this page (`#optima-record`). Nav, hero, and footer do not send visitors to simplicitymedia.com. The primary action is booking a strategy session.
+
 ## Local preview
 
 ```bash
