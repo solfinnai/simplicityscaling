@@ -27,8 +27,11 @@ Visual chrome matches [www.simplicitymedia.com](https://www.simplicitymedia.com)
 
 ## Public preview
 
-Local: `http://127.0.0.1:43127`  
-Hosted HTTPS: blocked until Origin is connected in the Vercel team Git settings (`https://vercel.com/henryfinnai-1359s-projects/~/settings/git`), then a `simplicityscaling` project can deploy on push.
+**Live HTTPS:** [https://simplicityscaling.vercel.app](https://simplicityscaling.vercel.app)  
+**Git repo:** [https://github.com/solfinnai/simplicityscaling](https://github.com/solfinnai/simplicityscaling)  
+Local: `http://127.0.0.1:43127`
+
+Vercel project `simplicityscaling` is linked to that GitHub repo. Deployment protection is off. Pushes to `main` publish production.
 
 ## Local preview
 
@@ -97,13 +100,23 @@ Create these contact / form fields before pointing production traffic. Internal 
 
 ## Deploy
 
-Vercel (recommended) or any Node host:
+Hosted now on Vercel: [https://simplicityscaling.vercel.app](https://simplicityscaling.vercel.app).
 
-1. Import this repo.
-2. Framework preset: Next.js. Install `npm install`. Build `npm run build`.
-3. Add the env vars above. Production can ship on the mock/Formspree path until HubSpot GUIDs exist.
-4. Confirm `/`, `/privacy`, `/thanks`, and `POST /api/lead`.
-5. Run `npm run claim-audit` in CI if desired.
+**Forms on this preview:** mock fallback. HubSpot and Formspree keys are not set, so `POST /api/lead` validates, accepts the lead, logs `[lead:mock]`, and still redirects to `/thanks`. Leads are **not** landing in HubSpot yet.
+
+Henry still needs these Vercel env vars to go live:
+
+| Secret | Purpose |
+|---|---|
+| `HUBSPOT_PORTAL_ID` | HubSpot portal / account ID |
+| `HUBSPOT_SOFT_FORM_GUID` | Scorecard form GUID |
+| `HUBSPOT_HARD_FORM_GUID` | Strategy session form GUID |
+
+Optional: `FORMSPREE_FORM_ID` (if HubSpot is delayed), `NEXT_PUBLIC_TURNSTILE_SITE_KEY` + `TURNSTILE_SECRET_KEY`, `NEXT_PUBLIC_GA_MEASUREMENT_ID`.
+
+Also in HubSpot: create the property map below, and a hard-form workflow that never enrolls `do_not_market=true` / `form_type=hard` in a marketing drip. Sales notify / calendar is ops.
+
+To redeploy: push `main` on the GitHub repo, or add `simplicityscaling.com` in the Vercel project domain settings.
 
 ## DNS cutover (Henry)
 
