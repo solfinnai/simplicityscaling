@@ -1,0 +1,188 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@font-face {
+  font-family: "Sora";
+  src: url("/fonts/sora-variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/space-grotesk-variable.woff2") format("woff2");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-orange: var(--orange);
+  --color-danger: var(--danger);
+  --color-accent-50: #e6f4fc;
+  --color-accent-100: #cce9f9;
+  --color-accent-600: #1a73b0;
+  --color-accent-700: #145684;
+  --color-background: var(--paper);
+  --color-foreground: var(--ink);
+  --color-primary: #09090b;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--card);
+  --color-secondary-foreground: var(--ink);
+  --color-muted-foreground: var(--muted);
+  --color-border: var(--rule);
+  --color-input: var(--rule);
+  --color-ring: var(--accent);
+  --color-destructive: var(--danger);
+  --font-sans: "Sora", system-ui, -apple-system, sans-serif;
+  --font-serif: "Sora", system-ui, -apple-system, sans-serif;
+  --font-accent: "Space Grotesk", system-ui, -apple-system, sans-serif;
+  --radius: 0.5rem;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #fafafa;
+  --card: #ffffff;
+  --ink: #18181b;
+  --muted: #52525b;
+  --rule: #e4e4e7;
+  --accent: #2190dc;
+  --orange: #ff884d;
+  --danger: #ef4444;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-accent);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #09090b;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+@utility btn-primary {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: #09090b;
+  padding-inline: 1.5rem;
+  font-family: var(--font-accent);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 12px 24px -8px rgb(9 9 11 / 0.28);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+@utility btn-primary {
+  &:hover {
+    background: #27272a;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 28px -8px rgb(9 9 11 / 0.32);
+  }
+}
+
+@utility btn-secondary {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid #d4d4d8;
+  background: transparent;
+  padding-inline: 1.5rem;
+  font-family: var(--font-accent);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #18181b;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+@utility btn-secondary {
+  &:hover {
+    background: #f4f4f5;
+    border-color: #a1a1aa;
+  }
+}
+
+@utility eyebrow {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  border: 1px solid rgb(228 228 231 / 0.85);
+  background: rgb(255 255 255 / 0.72);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #52525b;
+  box-shadow: 0 1px 2px rgb(9 9 11 / 0.04);
+  backdrop-filter: blur(6px);
+}
+
+@utility hairline {
+  height: 1px;
+  background: #e4e4e7;
+}
