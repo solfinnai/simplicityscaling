@@ -1,15 +1,22 @@
+import { SectionCta } from "@/components/section-cta";
+import { SystemLoop } from "@/components/system-loop";
 import { copy } from "@/lib/copy";
 
 export function FourMoves() {
   return (
     <section id="system" className="border-t border-neutral-200 bg-white">
       <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
-        <h2 className="max-w-2xl text-3xl tracking-tight sm:text-4xl">
-          {copy.fourMoves.heading}
-        </h2>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed font-medium text-neutral-600 sm:text-lg">
-          {copy.fourMoves.intro}
-        </p>
+        <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+          <div>
+            <h2 className="max-w-2xl text-3xl tracking-tight sm:text-4xl">
+              {copy.fourMoves.heading}
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed font-medium text-neutral-600 sm:text-lg">
+              {copy.fourMoves.intro}
+            </p>
+          </div>
+          <SystemLoop />
+        </div>
         <ol className="mt-12 grid gap-5 sm:grid-cols-2">
           {copy.fourMoves.items.map((item) => (
             <li
@@ -26,6 +33,7 @@ export function FourMoves() {
             </li>
           ))}
         </ol>
+        <SectionCta eventLabel="system_book" className="mt-10" />
       </div>
     </section>
   );

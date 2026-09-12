@@ -46,7 +46,7 @@ export function SiteFooter() {
             </a>
           </p>
           <p className="flex flex-wrap gap-x-4 gap-y-2">
-            <a href={SITE.caseStudyUrl} className="hover:text-white">
+            <a href={SITE.caseStudyPath} className="hover:text-white">
               {copy.footer.caseStudy}
             </a>
             <a href="#strategy-session" className="hover:text-white">
@@ -54,9 +54,6 @@ export function SiteFooter() {
             </a>
             <a href="/privacy" className="hover:text-white">
               Privacy
-            </a>
-            <a href={SITE.linkedinUrl} className="hover:text-white">
-              LinkedIn
             </a>
           </p>
         </div>

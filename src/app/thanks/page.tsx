@@ -73,12 +73,9 @@ export default async function ThanksPage({
         >
           Back to the system
         </Link>
-        <a
-          href={SITE.caseStudyUrl}
-          className="btn-secondary"
-        >
-          Optima case study
-        </a>
+        <Link href={`/${SITE.caseStudyPath}`} className="btn-secondary">
+          Optima record
+        </Link>
       </div>
     </article>
   );

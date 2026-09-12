@@ -11,10 +11,10 @@ export function SiteHeader() {
           <HeaderBrand />
           <nav aria-label="Primary" className="flex shrink-0 items-center gap-3 sm:gap-5">
             <a
-              href={SITE.caseStudyUrl}
+              href={SITE.caseStudyPath}
               className="font-accent text-sm font-bold tracking-tight text-neutral-800 underline-offset-4 hover:text-accent hover:underline"
             >
-              <span className="sm:hidden">Case study</span>
+              <span className="sm:hidden">Record</span>
               <span className="hidden sm:inline">{copy.nav.caseStudy}</span>
             </a>
             <a href="#strategy-session" className="btn-primary !min-h-11 px-5 text-sm sm:px-6">
