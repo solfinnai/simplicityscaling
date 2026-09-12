@@ -21,6 +21,15 @@ export const copy = {
     primaryCta: "See if this system fits your category",
     secondaryCta: "Book a strategy session",
     caseStudy: `${SITE.caseStudyLabel}`,
+    sessionCard: {
+      heading: "What the session is",
+      body: "A senior operator reviews category, spend band, and what broke in the last ninety days. Qualified conversations go to Simplicity sales.",
+      bullets: [
+        "Reply within one business day",
+        "No automated drip from this form",
+        "Under $50k still submits; we flag the floor",
+      ],
+    },
   },
   proofChips: [
     { id: "C01", label: "Inc. 26,006% (2015 period)" },
@@ -97,21 +106,43 @@ export const copy = {
     ],
   },
   soft: {
+    eyebrow: "If a session is too soon",
     heading: "Get the System scorecard",
     body: "One page: the four moves, response-event checklist by category, evidence required before scale.",
     submit: "Get the System scorecard",
+    bookInstead: "Prefer the conversation? Book a strategy session.",
   },
   hard: {
+    eyebrow: "Primary next step",
     heading: "Book a strategy session",
     body: "Tell us the category, spend band, and what broke in the last ninety days. A senior operator reviews it. Qualified sessions route to Simplicity sales.",
     submit: "Request my strategy session",
+    continue: "Continue to the brief",
+    back: "Back",
+    step1: "You",
+    step2: "The work",
+    stepError: "Name, work email, company, and role are required to continue.",
     microcopy:
       "We respond within one business day. No automated drip from this form.",
+    nextSteps: [
+      {
+        title: "You send the brief",
+        body: "Category, monthly purchased media, channels, and what the next dollar has to fix.",
+      },
+      {
+        title: "An operator reads it",
+        body: "We decide if a bounded test is the right next engagement.",
+      },
+      {
+        title: "Sales scopes the work",
+        body: "Qualified sessions route to Simplicity sales. No marketing drip.",
+      },
+    ],
   },
   evidence: {
     heading: "How we treat evidence",
     body: "Inc. rankings and growth rates are independent public record for the years named. Campaign history from 2012 is an agency record. Optima built the operation; Simplicity helped build and scale demand.",
-    link: "Jump to the Optima record",
+    link: "Book a strategy session from this record",
   },
   footer: {
     line: `A Simplicity Media operating system · ${SITE.location} · ${SITE.phoneDisplay} · ${SITE.email}`,

@@ -67,14 +67,17 @@ export default async function ThanksPage({
         </p>
       </div>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <Link
-          href="/"
-          className="btn-primary"
-        >
-          Back to the system
-        </Link>
-        <Link href={`/${SITE.caseStudyPath}`} className="btn-secondary">
-          Optima record
+        {isHard ? (
+          <a href={SITE.phoneHref} className="btn-primary">
+            Call {SITE.phoneDisplay}
+          </a>
+        ) : (
+          <Link href="/#strategy-session" className="btn-primary">
+            Book a strategy session
+          </Link>
+        )}
+        <Link href={isHard ? "/" : "/#optima-record"} className="btn-secondary">
+          {isHard ? "Back to the system" : "Read the Optima record"}
         </Link>
       </div>
     </article>

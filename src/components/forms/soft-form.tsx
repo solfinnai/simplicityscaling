@@ -1,5 +1,6 @@
 "use client";
 
+import { CtaLink } from "@/components/cta-link";
 import { copy } from "@/lib/copy";
 import { CATEGORIES_SOFT } from "@/lib/forms";
 
@@ -24,12 +25,21 @@ export function SoftForm() {
     <section id="scorecard" className="border-t border-neutral-200">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:py-24">
         <div>
-          <p className="eyebrow">Soft CTA</p>
+          <p className="eyebrow">{copy.soft.eyebrow}</p>
           <h2 className="mt-5 text-3xl tracking-tight sm:text-4xl">
             {copy.soft.heading}
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed font-medium text-neutral-600">
             {copy.soft.body}
+          </p>
+          <p className="mt-5">
+            <CtaLink
+              href="#strategy-session"
+              eventLabel="scorecard_book_instead"
+              className="text-sm font-bold text-neutral-800 underline decoration-1 underline-offset-4 hover:text-accent"
+            >
+              {copy.soft.bookInstead}
+            </CtaLink>
           </p>
         </div>
         <form

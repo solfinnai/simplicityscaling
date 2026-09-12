@@ -13,10 +13,10 @@ export default function HomePage() {
     <>
       <Hero />
       <FourMoves />
-      <CategoryPanels />
       <BoundedTest />
       <HardForm />
       <SoftForm />
+      <CategoryPanels />
       <OptimaRecord />
       <EvidenceNote />
       <StickyCta />

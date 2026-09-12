@@ -11,10 +11,12 @@ export function StickyCta() {
   useEffect(() => {
     const onScroll = () => {
       const session = document.getElementById("strategy-session");
-      const sessionTop = session?.getBoundingClientRect().top ?? 9999;
+      const rect = session?.getBoundingClientRect();
       const pastHero = window.scrollY > 420;
-      const overForm = sessionTop < window.innerHeight * 0.72;
-      setVisible(pastHero && !overForm);
+      const formInView = Boolean(
+        rect && rect.top < window.innerHeight * 0.78 && rect.bottom > 96,
+      );
+      setVisible(pastHero && !formInView);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

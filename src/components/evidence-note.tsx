@@ -1,5 +1,4 @@
 import { copy } from "@/lib/copy";
-import { SITE } from "@/lib/site";
 
 export function EvidenceNote() {
   return (
@@ -13,7 +12,7 @@ export function EvidenceNote() {
         </p>
         <p className="mt-4">
           <a
-            href={SITE.caseStudyPath}
+            href="#strategy-session"
             className="text-sm font-bold text-accent underline-offset-4 hover:underline"
           >
             {copy.evidence.link}

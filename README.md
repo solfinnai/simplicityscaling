@@ -35,6 +35,8 @@ Vercel project `simplicityscaling` is linked to that GitHub repo. Deployment pro
 
 The Optima record lives on this page (`#optima-record`). Nav, hero, and footer do not send visitors to simplicitymedia.com. The primary action is booking a strategy session.
 
+Page order: hero → four moves → bounded test → strategy session form → scorecard recovery → category panels → Optima record. The session form is two steps so the first ask is identity, not the full brief.
+
 ## Local preview
 
 ```bash

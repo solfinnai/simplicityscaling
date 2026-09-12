@@ -73,6 +73,30 @@ export function Hero() {
               </li>
             ))}
           </ul>
+          <div className="mt-6 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <p className="font-accent text-lg font-bold tracking-tight text-neutral-950">
+              {copy.hero.sessionCard.heading}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+              {copy.hero.sessionCard.body}
+            </p>
+            <ul className="mt-4 space-y-2 text-sm text-neutral-700">
+              {copy.hero.sessionCard.bullets.map((bullet) => (
+                <li key={bullet} className="flex gap-2">
+                  <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+            <CtaLink
+              href="#strategy-session"
+              eventLabel="hero_card_session"
+              className="btn-primary mt-5 w-full"
+            >
+              {copy.hero.secondaryCta}
+              <CtaArrow />
+            </CtaLink>
+          </div>
         </aside>
       </div>
     </section>

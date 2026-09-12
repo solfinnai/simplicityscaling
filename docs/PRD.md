@@ -98,21 +98,23 @@ Optional later: scorecard PDF asset. Not a v1 route.
 
 ### LP section order
 
-1. Minimal nav (Book session + case study text link)
-2. Hero + proof chips
+1. Minimal nav (Book session + in-page Optima record)
+2. Hero + proof chips + session card
 3. Four moves (Prove response, Build recognition, Read demand, Improve the next buy)
-4. A/B/C panels (Finance & legal; Local consultations; Products & memberships)
-5. Bounded test offer ($100k+/mo media)
-6. Soft CTA scorecard form
-7. Hard CTA strategy session form
-8. Evidence method note
-9. Footer (Irvine phone, email, Inc. attribution, no Optima revenue)
+4. Bounded test offer ($100k+/mo media)
+5. Hard CTA strategy session form (two steps: you → the work)
+6. Soft CTA scorecard form (recovery if they will not book)
+7. A/B/C panels (Finance & legal; Local consultations; Products & memberships)
+8. Inlined Optima record (`#optima-record`)
+9. Evidence method note → book
+10. Footer (Irvine phone, email, Inc. attribution, no Optima revenue)
 
 ### Link policy
 
-- Main site link **only** as Optima case study: https://simplicitymedia.com/results/optima-tax-relief/
-- No primary CTAs to the Simplicity Media homepage
-- Footer may repeat the case study link and Book a session
+- Optima record stays on this page. Do not send visitors to simplicitymedia.com for the case study.
+- Brand assets may load from `simplicitymedia.com/images` and `simplicitymedia.com/fonts`.
+- No primary CTAs to the Simplicity Media homepage.
+- Footer repeats the in-page record and Book a session.
 
 ---
 
