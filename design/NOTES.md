@@ -31,12 +31,12 @@ Dedicated landing-page research (single CTA, no nav exits, proof on-page) applie
 - One primary action: book a strategy session. Repeated after each proof block. Sticky on mobile.
 - Scorecard is the recovery magnet, not an equal hero CTA.
 - Optima record is inlined at the bottom. No click-out to the corporate case study.
-- Images: no stock photos. Use typeset Inc. proof, a system-loop diagram, and the official wordmark.
+- Images: no stock photos. Use typeset Inc. proof, a system-loop diagram, the official wordmark, and Simplicity production stills (`#production`). Caption them as set photography. Do not attribute them to Optima.
 
 ## Do not
 
 - Warm cream / bronze “memo” palette (that was a draft direction, not their site)
-- Stock growth collage, spokesperson photos, cleared-talent imagery
+- Stock growth collage, spokesperson photos, cleared-talent imagery, celebrity or studio-copyright stills
 - Primary CTAs to the corporate homepage
 - Outbound case-study links in the funnel chrome
 - Rewrite approved LP copy to sound more “on brand”

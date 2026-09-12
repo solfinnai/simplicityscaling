@@ -63,6 +63,55 @@ export const copy = {
       },
     ],
   },
+  production: {
+    eyebrow: "On the floor",
+    heading: "The work that recognition requires",
+    intro:
+      "Recognition is not a media plan. It is lighting, camera, and a promise people believe. These stills are from Simplicity production sets — not the Optima radio record.",
+    note: "Production stills from Simplicity sets. Not Optima campaign photography.",
+    stills: [
+      {
+        src: "/images/production/courtyard-dolly.webp",
+        alt: "Camera dolly on rails in a marble courtyard during a Simplicity production.",
+        caption: "Dolly move on a marble courtyard",
+        width: 960,
+        height: 720,
+        span: "wide",
+      },
+      {
+        src: "/images/production/camera-operator.webp",
+        alt: "Camera operator on a seated cart under arcade light on a Simplicity set.",
+        caption: "Operator on the cart",
+        width: 720,
+        height: 720,
+        span: "square",
+      },
+      {
+        src: "/images/production/hillside-sunset.webp",
+        alt: "Cinema camera and stills camera on a hillside town at dusk.",
+        caption: "Dusk coverage on a hillside town",
+        width: 1080,
+        height: 721,
+        span: "third",
+      },
+      {
+        src: "/images/production/process-trailer.webp",
+        alt: "Process trailer, overhead silk, and lighting crew shooting a car under an overpass.",
+        caption: "Process trailer under an overpass",
+        width: 1600,
+        height: 1200,
+        span: "third",
+      },
+      {
+        src: "/images/production/night-lighting.webp",
+        alt: "Night car setup with an overhead silk and a second bounce frame.",
+        caption: "Night car, silk and bounce",
+        width: 1600,
+        height: 1200,
+        span: "third",
+      },
+    ],
+  },
   categories: {
     heading: "Same operating clarity. Different response event.",
     panels: [
