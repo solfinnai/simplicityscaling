@@ -35,25 +35,25 @@ export function Hero() {
           </div>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <CtaLink
-              href="#scorecard"
-              eventLabel="hero_primary_scorecard"
+              href="#strategy-session"
+              eventLabel="hero_primary_session"
               className="btn-primary"
             >
-              {copy.hero.primaryCta}
+              {copy.hero.secondaryCta}
               <CtaArrow />
             </CtaLink>
             <CtaLink
-              href="#strategy-session"
-              eventLabel="hero_secondary_session"
+              href="#scorecard"
+              eventLabel="hero_secondary_scorecard"
               className="btn-secondary"
             >
-              {copy.hero.secondaryCta}
+              {copy.hero.primaryCta}
             </CtaLink>
           </div>
           <p className="mt-5">
             <CtaLink
-              href={SITE.caseStudyUrl}
-              eventLabel="hero_case_study"
+              href={SITE.caseStudyPath}
+              eventLabel="hero_case_study_inline"
               className="text-sm font-bold text-neutral-600 underline decoration-1 underline-offset-4 hover:text-neutral-950"
             >
               {copy.hero.caseStudy}

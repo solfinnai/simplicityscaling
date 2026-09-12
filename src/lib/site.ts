@@ -11,7 +11,6 @@ export const SITE = {
   location: "Irvine, CA",
   address: "2030 Main St, Suite 1300",
   cityLine: "Irvine, CA 92614",
-  linkedinUrl: "https://www.linkedin.com/company/simplicity-media-group",
-  caseStudyUrl: "https://simplicitymedia.com/results/optima-tax-relief/",
-  caseStudyLabel: "Read the full Optima case study",
+  caseStudyPath: "#optima-record",
+  caseStudyLabel: "Read the Optima record",
 } as const;

@@ -8,7 +8,7 @@ export const copy = {
   },
   nav: {
     book: "Book session",
-    caseStudy: "Optima case study",
+    caseStudy: "Optima record",
   },
   hero: {
     eyebrow: "The System Behind the Scale",
@@ -20,7 +20,7 @@ export const copy = {
     thesis: "The number is the evidence. The system is the story.",
     primaryCta: "See if this system fits your category",
     secondaryCta: "Book a strategy session",
-    caseStudy: `${SITE.caseStudyLabel} →`,
+    caseStudy: `${SITE.caseStudyLabel}`,
   },
   proofChips: [
     { id: "C01", label: "Inc. 26,006% (2015 period)" },
@@ -111,13 +111,13 @@ export const copy = {
   evidence: {
     heading: "How we treat evidence",
     body: "Inc. rankings and growth rates are independent public record for the years named. Campaign history from 2012 is an agency record. Optima built the operation; Simplicity helped build and scale demand.",
-    link: "Full Optima case study on simplicitymedia.com",
+    link: "Jump to the Optima record",
   },
   footer: {
     line: `A Simplicity Media operating system · ${SITE.location} · ${SITE.phoneDisplay} · ${SITE.email}`,
     copyright:
       "© 2026 Simplicity Media. Optima Tax Relief is a client. Rankings and growth figures attributed to Inc. as stated. No Optima revenue figures are published on this site.",
-    caseStudy: "Optima case study (main site)",
+    caseStudy: "Optima record",
     book: "Book a session",
   },
 } as const;
