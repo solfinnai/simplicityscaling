@@ -21,7 +21,7 @@ export function SiteFooter() {
       </div>
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-12 sm:px-6">
         <Image
-          src="/images/simplicity-logo.webp"
+          src="https://simplicitymedia.com/images/simplicity-logo.webp"
           alt="Simplicity Media"
           width={200}
           height={37}
