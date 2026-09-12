@@ -13,7 +13,7 @@ export function EvidenceNote() {
         </p>
         <p className="mt-4">
           <a
-            href={SITE.caseStudyUrl}
+            href={SITE.caseStudyPath}
             className="text-sm font-bold text-accent underline-offset-4 hover:underline"
           >
             {copy.evidence.link}

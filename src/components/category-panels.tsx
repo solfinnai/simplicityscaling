@@ -1,3 +1,4 @@
+import { SectionCta } from "@/components/section-cta";
 import { copy } from "@/lib/copy";
 
 export function CategoryPanels() {
@@ -29,6 +30,7 @@ export function CategoryPanels() {
             </article>
           ))}
         </div>
+        <SectionCta eventLabel="category_book" className="mt-10" />
       </div>
     </section>
   );

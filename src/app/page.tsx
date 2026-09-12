@@ -5,6 +5,8 @@ import { HardForm } from "@/components/forms/hard-form";
 import { SoftForm } from "@/components/forms/soft-form";
 import { FourMoves } from "@/components/four-moves";
 import { Hero } from "@/components/hero";
+import { OptimaRecord } from "@/components/optima-record";
+import { StickyCta } from "@/components/sticky-cta";
 
 export default function HomePage() {
   return (
@@ -13,9 +15,11 @@ export default function HomePage() {
       <FourMoves />
       <CategoryPanels />
       <BoundedTest />
-      <SoftForm />
       <HardForm />
+      <SoftForm />
+      <OptimaRecord />
       <EvidenceNote />
+      <StickyCta />
     </>
   );
 }

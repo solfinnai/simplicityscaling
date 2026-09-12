@@ -1,3 +1,4 @@
+import { SectionCta } from "@/components/section-cta";
 import { copy } from "@/lib/copy";
 
 export function BoundedTest() {
@@ -23,6 +24,7 @@ export function BoundedTest() {
             </li>
           ))}
         </ul>
+        <SectionCta eventLabel="offer_book" className="lg:col-span-2" />
       </div>
     </section>
   );
