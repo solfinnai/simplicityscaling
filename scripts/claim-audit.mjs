@@ -14,6 +14,7 @@ const BANNED = [
 ];
 
 const ALLOWED_MAIN_SITE = "https://simplicitymedia.com/results/optima-tax-relief/";
+const ALLOWED_ASSET = /^https:\/\/simplicitymedia\.com\/(images|fonts)\//;
 
 async function walk(entry, files = []) {
   const info = await stat(entry);
@@ -78,9 +79,13 @@ for (const file of files) {
   const matches = text.match(/https?:\/\/simplicitymedia\.com[^"'\s)]*/g) || [];
   for (const url of matches) {
     const clean = url.replace(/[.,]$/, "");
-    if (clean !== ALLOWED_MAIN_SITE && !clean.startsWith(`${ALLOWED_MAIN_SITE}`)) {
+    if (
+      clean !== ALLOWED_MAIN_SITE &&
+      !clean.startsWith(`${ALLOWED_MAIN_SITE}`) &&
+      !ALLOWED_ASSET.test(clean)
+    ) {
       failed = true;
-      console.error(`${rel}: main-site URL is not the Optima case study: ${clean}`);
+      console.error(`${rel}: unexpected simplicitymedia.com URL: ${clean}`);
     }
   }
 }

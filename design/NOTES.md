@@ -24,9 +24,19 @@ Visual direction: match [simplicitymedia.com](https://www.simplicitymedia.com) c
 - Proof as typeset facts
 - Case study as the only simplicitymedia.com CTA
 
+## Conversion pattern (Sep 12, 2026)
+
+Dedicated landing-page research (single CTA, no nav exits, proof on-page) applied here:
+
+- One primary action: book a strategy session. Repeated after each proof block. Sticky on mobile.
+- Scorecard is the recovery magnet, not an equal hero CTA.
+- Optima record is inlined at the bottom. No click-out to the corporate case study.
+- Images: no stock photos. Use typeset Inc. proof, a system-loop diagram, and the official wordmark.
+
 ## Do not
 
 - Warm cream / bronze “memo” palette (that was a draft direction, not their site)
-- Stock growth collage, spokesperson photos, jingle art
+- Stock growth collage, spokesperson photos, cleared-talent imagery
 - Primary CTAs to the corporate homepage
+- Outbound case-study links in the funnel chrome
 - Rewrite approved LP copy to sound more “on brand”

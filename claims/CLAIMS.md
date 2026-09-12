@@ -16,4 +16,6 @@ Rule: every public number or historical assertion must match Approved language e
 | C09 | Strategic contribution | USE | Optima built the service org; Simplicity helped build and scale the media/brand system. | Contribution, not sole causation |
 | C10 | Interpretation | USE | The number is the evidence. The system is the story. | Simplicity takeaway |
 
-Case study URL (reference only): https://simplicitymedia.com/results/optima-tax-relief/
+| C11 | Agency-reported | USE on inlined record | 200+ radio stations nationwide each week | Qualify as campaign record, not Inc. |
+
+The Optima record is inlined on this funnel (`#optima-record`). Do not send visitors to the corporate case-study URL from nav, hero, or footer. Corporate URL remains source material only: https://simplicitymedia.com/results/optima-tax-relief/
