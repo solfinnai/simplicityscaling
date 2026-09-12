@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 43127",
+    "predev": "node scripts/materialize-production-stills.mjs",
+    "prebuild": "node scripts/materialize-production-stills.mjs",
     "build": "next build",
     "start": "next start -p 43127",
     "lint": "eslint",

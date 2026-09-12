@@ -6,6 +6,7 @@ import { SoftForm } from "@/components/forms/soft-form";
 import { FourMoves } from "@/components/four-moves";
 import { Hero } from "@/components/hero";
 import { OptimaRecord } from "@/components/optima-record";
+import { ProductionFloor } from "@/components/production-floor";
 import { StickyCta } from "@/components/sticky-cta";
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
     <>
       <Hero />
       <FourMoves />
+      <ProductionFloor />
       <BoundedTest />
       <HardForm />
       <SoftForm />
