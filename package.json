@@ -6,7 +6,7 @@
     "dev": "next dev -p 43127",
     "predev": "node scripts/materialize-production-stills.mjs",
     "prebuild": "node scripts/materialize-production-stills.mjs",
-    "build": "next build",
+    "build": "node scripts/materialize-production-stills.mjs && next build",
     "start": "next start -p 43127",
     "lint": "eslint",
     "claim-audit": "node scripts/claim-audit.mjs",
