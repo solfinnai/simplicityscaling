@@ -25,7 +25,11 @@ async function encodedPayload(name) {
   const names = existsSync(encodedDir)
     ? (await readdir(encodedDir)).filter((file) => file.startsWith(prefix))
     : [];
-  names.sort();
+  names.sort((a, b) => {
+    const left = Number(/part(\d+)$/.exec(a)?.[1] ?? 0);
+    const right = Number(/part(\d+)$/.exec(b)?.[1] ?? 0);
+    return left - right;
+  });
   if (names.length === 0) return null;
 
   const chunks = [];
