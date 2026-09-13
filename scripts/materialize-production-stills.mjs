@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 
@@ -15,25 +15,24 @@ const stills = [
   "process-trailer.webp",
 ];
 
-async function readEncodedStill(name) {
-  const encoded = path.join(encodedDir, `${name}.b64`);
-  if (existsSync(encoded)) {
-    return await readFile(encoded, "utf8");
+async function encodedPayload(name) {
+  const whole = path.join(encodedDir, `${name}.b64`);
+  if (existsSync(whole)) {
+    return (await readFile(whole, "utf8")).replace(/\s+/g, "");
   }
 
-  const parts = [];
-  for (let i = 1; ; i++) {
-    const part = path.join(encodedDir, `${name}.b64.part${String(i).padStart(2, "0")}`);
-    if (!existsSync(part)) break;
-    parts.push(await readFile(part, "utf8"));
-  }
+  const prefix = `${name}.b64.part`;
+  const names = existsSync(encodedDir)
+    ? (await readdir(encodedDir)).filter((file) => file.startsWith(prefix))
+    : [];
+  names.sort();
+  if (names.length === 0) return null;
 
-  if (parts.length === 0) {
-    console.error(`Missing encoded still: ${path.relative(root, encoded)}`);
-    process.exit(1);
+  const chunks = [];
+  for (const file of names) {
+    chunks.push(await readFile(path.join(encodedDir, file), "utf8"));
   }
-
-  return parts.join("");
+  return chunks.join("").replace(/\s+/g, "");
 }
 
 await mkdir(destDir, { recursive: true });
@@ -41,8 +40,12 @@ await mkdir(destDir, { recursive: true });
 for (const name of stills) {
   const dest = path.join(destDir, name);
   if (existsSync(dest)) continue;
-  const encodedText = await readEncodedStill(name);
-  const body = Buffer.from(encodedText, "base64");
+  const encoded = await encodedPayload(name);
+  if (!encoded) {
+    console.warn(`Skipping missing still: ${name}`);
+    continue;
+  }
+  const body = Buffer.from(encoded, "base64");
   await writeFile(dest, body);
   console.log(`Wrote ${path.relative(root, dest)} (${body.length} bytes)`);
 }
